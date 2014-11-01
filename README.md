@@ -4,6 +4,8 @@ Polybase
 Online database of public polymer elements.
 Just add your github repo and let people know about Polymer elements you've made!
 
+Created during [GDG NYC: Polymer Polytechnic (Part 2) - DevFest](http://www.meetup.com/NYC-GDG/events/214629052/?a=uc1_vm&read=1&_af_eid=214629052&_af=event)
+
 Road map:
 - [ ] Add layout
 - [ ] Add firebase element connector https://polybase-org.firebaseio.com
