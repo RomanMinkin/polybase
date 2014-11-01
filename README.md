@@ -9,9 +9,9 @@ Created during [GDG NYC: Polymer Polytechnic (Part 2) - DevFest](http://www.meet
 DEMO: http://romanminkin.github.io/polybase
 
 Road map:
-- [ ] Add layout
-- [ ] Add firebase element connector https://polybase-org.firebaseio.com
-- [ ] Add button for adding github repo
-- [ ] add elemens list. binded to firebase result
+- [x] Add layout
+- [x] Add firebase element connector https://polybase-org.firebaseio.com
+- [x] Add button for adding github repo
+- [x] Add elemens list. binded to firebase result
 - [ ] Add search field and bind it to the elemens list
 - [ ] Create `gh-pages` repo and add dns record to http://polybase.org
