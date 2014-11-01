@@ -13,5 +13,6 @@ Road map:
 - [x] Add firebase element connector https://polybase-org.firebaseio.com
 - [x] Add button for adding github repo
 - [x] Add elemens list. binded to firebase result
+- [x] Integrate github API
 - [ ] Add search field and bind it to the elemens list
 - [ ] Create `gh-pages` repo and add dns record to http://polybase.org
