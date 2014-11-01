@@ -1,0 +1,62 @@
+<link rel="import" href="../components/paper-button/paper-button.html">
+<link rel="import" href="../components/paper-input/paper-input.html">
+<link rel="import" href="firebase-service.html">
+<link rel="import" href="github-service.html">
+
+
+<polymer-element name="search-repo-input" attributes="show">
+
+    <template>
+        <style>
+            paper-button[raised].colored {
+              background: #4285f4;
+              color: #fff;
+            }
+        </style>
+
+        <firebase-service id="firebase-service"></firebase-service>
+        <github-service id="github-service"></github-service>
+
+        <div layout horizontal center>
+            <paper-input
+                label="Search for element or add new repo link"
+                floatingLabel
+                value=""
+                inputValue="{{ value }}">
+            >
+            </paper-input>
+
+            <paper-button
+                raised
+                class="colored"
+                on-tap="{{submitNewRepo}}"
+            >Sumbit</paper-button>
+        </div>
+    </template>
+
+    <script>
+        Polymer("search-repo-input", {
+            valueChanged: function() {
+                console.log("valueChanged", this.value);
+                this.$['firebase-service'].dataChange(this.value);
+            },
+
+            submitNewRepo: function() {
+                var
+                    github   = this.$['github-service'],
+                    firebase = this.$['firebase-service'],
+                    repo     = github.extractGitHubRepoFromUrl(this.value)
+                ;
+
+                // https://github.com/RomanMinkin/polybase
+                if (repo) {
+                    github.getRepoDataAsync(repo, function (error, response) {
+                        if (response) {
+                            firebase.addRepoObject(response);
+                        }
+                    });
+                }
+            }
+        });
+    </script>
+</polymer-element>

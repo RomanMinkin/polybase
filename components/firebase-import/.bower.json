@@ -1,0 +1,17 @@
+{
+  "name": "firebase-import",
+  "private": true,
+  "dependencies": {
+    "firebase": "firebase#~v1.1.3"
+  },
+  "homepage": "https://github.com/RomanMinkin/firebase-import",
+  "_release": "ccf880f3b1",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "ccf880f3b14eb138910290d122ba00af60d9f854"
+  },
+  "_source": "git://github.com/RomanMinkin/firebase-import.git",
+  "_target": "master",
+  "_originalSource": "RomanMinkin/firebase-import"
+}
