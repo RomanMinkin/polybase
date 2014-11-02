@@ -36,10 +36,10 @@
 
     <script>
         Polymer("search-repo-input", {
-            valueChanged: function() {
-                console.log("valueChanged", this.value);
-                this.$['firebase-service'].dataChange(this.value);
-            },
+            // valueChanged: function() {
+            //     console.log("valueChanged", this.value);
+            //     this.$['firebase-service'].dataChange(this.value);
+            // },
 
             submitNewRepo: function() {
                 var
@@ -47,6 +47,8 @@
                     firebase = this.$['firebase-service'],
                     repo     = github.extractGitHubRepoFromUrl(this.value)
                 ;
+
+                console.log('repo', repo);
 
                 // https://github.com/RomanMinkin/polybase
                 if (repo) {

@@ -39,7 +39,7 @@
                 ajax.url = apiBase + repo;
 
                 ajax.addEventListener('core-response', function(e) {
-                    console.log(this.response);
+                    ajax.url = '';
                     cb(e, this.response);
                 });
             },
